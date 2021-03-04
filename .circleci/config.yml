@@ -13,9 +13,6 @@ workflows:
     jobs:
       - welcome/run
 
-  win:
-    jobs:
-      - win
        build: # name of your job
           executor:
             name: win/default # executor type
