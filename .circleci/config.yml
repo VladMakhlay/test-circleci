@@ -6,21 +6,14 @@ orbs:
   welcome: circleci/welcome-orb@0.4.1
   win: circleci/windows@2.2.0 # The Windows orb give you everything you need to start using the Windows executor.
 # Orchestrate or schedule a set of jobs
-workflows:
   # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
-    jobs:
-      - welcome/run
+jobs:
+   build: # name of your job
+      executor:
+        name: win/default # executor type
+        size: "medium" # resource class, can be "medium", "large", "xlarge", "2xlarge", defaults to "medium" if not specified
 
-  win:
-    jobs:
-      - build: # name of your job
-          executor:
-            name: win/default # executor type
-            size: "medium" # resource class, can be "medium", "large", "xlarge", "2xlarge", defaults to "medium" if not specified
-
-          steps: # Commands are run in a Windows virtual machine environment
-            - checkout
-            - run: Write-Host 'Hello, Windows'
+      steps: # Commands are run in a Windows virtual machine environment
+        - checkout
+        - run: Write-Host 'Hello, Windows'
 
