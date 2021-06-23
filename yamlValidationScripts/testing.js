@@ -15,7 +15,7 @@ const options = {
           name: 'string',
           strategy: 'string',
           twilio_id: 'number',
-          twilio_idddd: 'number'
+          // twilio_idddd: 'number'
         }
       ]
     }
