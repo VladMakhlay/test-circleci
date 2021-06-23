@@ -21,7 +21,7 @@ jobs:
     executor: node/default
     steps:
       - checkout
-      - run: 'node W:\Z-WORK\EPAM\YARA\test-circleci\test.js'
+      - run: 'node W:/Z-WORK/EPAM/YARA/test-circleci/test.js'
 
 workflows:
   win:
