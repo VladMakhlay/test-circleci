@@ -15,7 +15,7 @@ jobs:
     steps: # Commands are run in a Windows virtual machine environment
       - checkout
       - run: Write-Host 'Hello, Windows'
-      - run: node ../test.js
+      - run: node W:\Z-WORK\EPAM\YARA\test-circleci\test.js
 workflows:
   win:
     jobs:
