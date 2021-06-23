@@ -8,7 +8,6 @@ orbs:
   node: circleci/node@2.0.2
 # Orchestrate or schedule a set of jobs
 jobs:
-  working_directory: ~/project
   build: # name of your job
     executor:
       name: win/default # executor type
@@ -19,12 +18,13 @@ jobs:
       - run: Write-Host 'Hello, Windows'
 
   log:
+    working_directory: ~/project
     executor: node/default
     steps:
       - checkout
       - run:
-        command: |
-         node ../testing.js
+          command: |
+            node testing.js
 
 workflows:
   win:
