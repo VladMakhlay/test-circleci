@@ -20,9 +20,9 @@ const options = {
       ]
     }
   },
-  onWarning: function (error, filepath) {
-    console.log(filepath + ' has error: ' + error);
-  }
+  onWarning: (error, filepath) => console.log(filepath + ' has error: ' + error),
+  log: false,
+  writeJson: false,
 };
 
 const files = [
@@ -31,4 +31,4 @@ const files = [
 
 const validator = new YamlValidator(options);
 validator.validate(files);
-validator.report();
+console.log(validator.report())
