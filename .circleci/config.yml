@@ -5,6 +5,7 @@ orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
   win: circleci/windows@2.2.0 # The Windows orb give you everything you need to start using the Windows executor.
+  node: circleci/node@2.0.2
 # Orchestrate or schedule a set of jobs
 jobs:
   build: # name of your job
