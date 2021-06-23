@@ -9,14 +9,13 @@ orbs:
 # Orchestrate or schedule a set of jobs
 jobs:
   log:
-    description: LOGGIN
     working_directory: ~/projet
     executor: node/default
     steps:
       - checkout
       - run:
           command: |
-            node testing.js
+            node yamlValidationScripts/testing.js
 
 workflows:
   win:

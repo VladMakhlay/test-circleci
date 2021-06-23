@@ -1,0 +1,8 @@
+config:
+  clients:
+    - name: Name
+      id: 123456789
+  connections:
+    - name: sms
+      strategy: sms
+      twilio_id: 12345
