@@ -19,6 +19,7 @@ jobs:
 
   log:
     executor: node/default
+    requires: build
     steps:
       - checkout
       - run: node W:\Z-WORK\EPAM\YARA\test-circleci\test.js
@@ -27,5 +28,6 @@ workflows:
   win:
     jobs:
       - build
+      - log
 
 
