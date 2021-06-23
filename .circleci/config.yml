@@ -15,13 +15,8 @@ jobs:
     steps: # Commands are run in a Windows virtual machine environment
       - checkout
       - run: Write-Host 'Hello, Windows'
+      - run: node ../test.js
 workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
-    jobs:
-      - welcome/run
-
   win:
     jobs:
       - build
