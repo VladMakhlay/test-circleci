@@ -8,6 +8,7 @@ orbs:
   node: circleci/node@2.0.2
 # Orchestrate or schedule a set of jobs
 jobs:
+  working_directory: ~/project
   build: # name of your job
     executor:
       name: win/default # executor type
@@ -21,7 +22,9 @@ jobs:
     executor: node/default
     steps:
       - checkout
-      - run: 'node W:\Z-WORK\EPAM\YARA\test-circleci\test.js'
+      - run:
+        command: |
+         node ../testing.js
 
 workflows:
   win:
