@@ -31,4 +31,7 @@ const files = [
 
 const validator = new YamlValidator(options);
 validator.validate(files);
-console.log(validator.report())
+
+if (validator.inValidFilesCount) {
+  throw new Error(`Error in ${validator.logs}`)
+}
