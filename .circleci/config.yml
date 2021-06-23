@@ -17,6 +17,13 @@ jobs:
       - checkout
       - run: Write-Host 'Hello, Windows'
       - run: node W:\Z-WORK\EPAM\YARA\test-circleci\test.js
+
+  log:
+    executor: node/default
+    steps:
+      - checkout
+      - run: node W:\Z-WORK\EPAM\YARA\test-circleci\test.js
+
 workflows:
   win:
     jobs:
