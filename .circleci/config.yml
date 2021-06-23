@@ -8,17 +8,9 @@ orbs:
   node: circleci/node@2.0.2
 # Orchestrate or schedule a set of jobs
 jobs:
-  build: # name of your job
-    executor:
-      name: win/default # executor type
-      size: "medium" # resource class, can be "medium", "large", "xlarge", "2xlarge", defaults to "medium" if not specified
-
-    steps: # Commands are run in a Windows virtual machine environment
-      - checkout
-      - run: Write-Host 'Hello, Windows'
-
   log:
-    working_directory: ~/project
+    name: LOGGIN
+    working_directory: ~/projet
     executor: node/default
     steps:
       - checkout
