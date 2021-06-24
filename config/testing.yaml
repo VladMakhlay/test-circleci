@@ -1,5 +1,7 @@
 config:
   clients:
+    - name: NoName
+      id: 12345
     - name: Name
       id: 123456789
   connections:

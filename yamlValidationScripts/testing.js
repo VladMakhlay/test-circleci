@@ -15,7 +15,7 @@ const options = {
           name: 'string',
           strategy: 'string',
           twilio_id: 'number',
-          // twilio_idddd: 'number'
+          twilio_idddd: 'number'
         }
       ]
     }
@@ -31,6 +31,7 @@ const files = [
 
 const validator = new YamlValidator(options);
 validator.validate(files);
+validator.report();
 
 if (validator.inValidFilesCount) {
   throw new Error(`Error in ${validator.logs}`)
